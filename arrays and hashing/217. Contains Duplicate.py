@@ -41,6 +41,8 @@
 # 1 <= nums.length <= 105
 # -109 <= nums[i] <= 109
 
+# O(n), O(n)
+
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         hashset = set()
