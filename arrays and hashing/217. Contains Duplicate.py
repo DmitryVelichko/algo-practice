@@ -42,13 +42,11 @@
 # -109 <= nums[i] <= 109
 
 # O(n), O(n)
-
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        hashset = set()
-        for n in nums:
-            if n in hashset:
-                return True
-            hashset.add(n)
-        return False
-        
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+        for i in range(len(nums)):
+            complement = target - nums[i]
+            if complement in hashmap:
+                return [hashmap[complement], i]
+            hashmap[nums[i]] = i
