@@ -46,4 +46,4 @@ class Solution:
             complement = target - nums[i]
             if complement in hashmap:
                 return [hashmap[complement], i]
-              hashmap[nums[i]] = i
+            hashmap[nums[i]] = i
