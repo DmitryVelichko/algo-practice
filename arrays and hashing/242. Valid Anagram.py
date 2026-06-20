@@ -46,3 +46,8 @@ class Solution:
                 return False
         return True
     
+
+    # Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+    #  The biggest issue with Unicode in anagram problems is that the same visual character can be represented in multiple ways in memory.
+     # Normalize both strings to NFC format (canonical composition)
+        # s = unicodedata.normalize("NFC", s) in memory
