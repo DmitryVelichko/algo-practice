@@ -41,8 +41,8 @@ class Solution:
             count[s[i]] = count.get(s[i], 0) + 1
             count[t[i]] = count.get(t[i], 0) - 1
         
-        for i in count.values():
-            if i != 0:
+        for i in count:
+            if count[i] != 0:
                 return False
         return True
     
