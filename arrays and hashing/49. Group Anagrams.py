@@ -1,4 +1,12 @@
+# 49. Group Anagrams
+# Solved
+# Medium
+# Topics
+# premium lock icon
+# Companies
+# Given an array of strings strs, group the anagrams together. You can return the answer in any order.
 
+ 
 
 # Example 1:
 
