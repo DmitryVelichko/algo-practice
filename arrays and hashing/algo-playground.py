@@ -40,7 +40,7 @@
 # strs[i] consists of lowercase English letters.
 
 # O(n, k), n - number of strs, k - len(str), O(n*k) - hasmap of arrays
-# Create [] with 26 zeros, each zero++, {010101: []}
+# Create [] with 26 zeros, hashamp {010101: [strng, strng]}
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         res = defaultdict(list)
