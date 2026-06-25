@@ -38,7 +38,7 @@
 
 # Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
- 
+# Bucket sort. {"1": 3 times}, [[],[],[],["1"]], iterate backwards
 # O(n), O(n)
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
