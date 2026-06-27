@@ -58,7 +58,7 @@
 # length of str + "#" + str: 4#string
 # O(n)
 
-# O(m+n), O(m+n)
+# O(n), O(n)
 class Solution:
     def encode(self, strs: List[str]) -> str:
         res = ""
