@@ -55,3 +55,5 @@
 
 # Follow up: Could you write a generalized algorithm to work on any possible set of characters?
 
+# length of str + "#" + str: 4#string
+# O(n)
