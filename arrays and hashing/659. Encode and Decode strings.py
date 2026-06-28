@@ -55,7 +55,7 @@
 
 # Follow up: Could you write a generalized algorithm to work on any possible set of characters?
 
-# length of str + "#" + str: 4#string
+# length of str + "#" + str: 6#string
 # O(n)
 
 # O(n), O(n)
@@ -72,9 +72,11 @@ class Solution:
 
         while i < len(s):
             j = i
-            while s[j] != "#":
+            while s[j] != '#':
                 j += 1
             length = int(s[i:j])
-            res.append(s[j + 1 : j + 1 + length])
-            i = j + 1 + length
+            i = j + 1
+            j = i + length
+            res.append(s[i:j])
+            i = j
         return res
