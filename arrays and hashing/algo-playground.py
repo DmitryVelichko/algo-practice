@@ -51,24 +51,60 @@ class Solution:
             res[tuple(count)].append(s)
         return list(res.values())
     
-    # O(n), O(26 english letters) => O(1)
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
+# Encode and Decode Strings
+# Medium
+# Topics
+# Company Tags
+# Hints
+# Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings.
 
-        count = {}
-        for i in range(len(s)):
-            count[s[i]] = count.get(s[i], 0) + 1
-            count[t[i]] = count.get(t[i], 0) - 1
-        
-        for i in count:
-            if count[i] != 0:
-                return False
-        return True
-    
+# Machine 1 (sender) has the function:
 
-    # Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
-    #  The biggest issue with Unicode in anagram problems is that the same visual character can be represented in multiple ways in memory.
-     # Normalize both strings to NFC format (canonical composition)
-        # s = unicodedata.normalize("NFC", s) in memory
+# String encode(List<String> strs) {
+#     // ... your code
+#     return encoded_string;
+# }
+# Machine 2 (receiver) has the function:
+
+# List<String> decode(String encoded_string) {
+#     // ... your code
+#     return decoded_strs;
+# }
+# So Machine 1 does:
+
+# String encoded_string = encode(strs);
+# and Machine 2 does:
+
+# List<String> decoded_strs = decode(encoded_string);
+# decoded_strs in Machine 2 should be the same as the input strs in Machine 1.
+
+# Implement the encode and decode methods.
+
+# Example 1:
+
+# Input: strs = ["Hello","World"]
+
+# Output: ["Hello","World"]
+# Explanation:
+
+# Solution solution = new Solution();
+# String encoded_string = solution.encode(strs);
+
+# // Machine 1 ---encoded_string---> Machine 2
+
+# List<String> decoded_strs = solution.decode(encoded_string);
+
+# Example 2:
+
+# Input: strs = [""]
+
+# Output: [""]
+
+# Constraints:
+
+# 0 <= strs.length < 100
+# 0 <= strs[i].length < 200
+# strs[i] contains any possible characters out of 256 valid ASCII characters.
+
+# Follow up: Could you write a generalized algorithm to work on any possible set of characters?
+
