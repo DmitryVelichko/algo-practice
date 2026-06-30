@@ -33,3 +33,20 @@
 
  
 
+# Constraints:
+
+# 1 <= strs.length <= 104
+# 0 <= strs[i].length <= 100
+# strs[i] consists of lowercase English letters.
+
+# O(n * k), n - number of strs, k - len(str), O(n*k) - hasmap of arrays
+# [0,0,0...*26], hashamp {"1110...": ["bac", "cab"]}
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = defaultdict(list)
+        for s in strs:
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+            res[tuple(count)].append(s)
+        return list(res.values())
