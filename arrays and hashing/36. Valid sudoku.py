@@ -50,3 +50,29 @@
 # board.length == 9
 # board[i].length == 9
 # board[i][j] is a digit 1-9 or '.'.
+
+# check if row, col, box are in set and add them to set
+# O(9**2), O(9**2)
+class Solution:
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
+        seen = set()
+        
+        for i in range(len(board)):
+            for j in range(len(board[i])):
+                cell = board[i][j]
+                
+                if cell == '.':
+                    continue
+                    
+                row = f"row: {i}, value: {cell}"
+                col = f"col: {j}, value: {cell}"
+                box = f"box: {i // 3}, {j // 3} value: {cell}"
+                
+                if row in seen or col in seen or box in seen:
+                    return False
+                    
+                seen.add(row)
+                seen.add(col)
+                seen.add(box)
+                
+        return True
