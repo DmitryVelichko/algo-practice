@@ -38,3 +38,16 @@
 # numbers is sorted in non-decreasing order.
 # -1000 <= target <= 1000
 # The tests are generated such that there is exactly one solution.
+
+# 2 pointers, compare sum of pointers to target
+# O(n), O(1)
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        l = 0
+        r = len(numbers)-1
+        while l<r:
+            if(numbers[l] + numbers[r] < target): l+=1
+            elif(numbers[l] + numbers[r] > target): r-=1
+            elif(numbers[l] + numbers[r] == target):
+                return [l+1, r+1]
+        return []
