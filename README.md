@@ -1,4 +1,4 @@
-# Arrays and Hashing:
+# Arrays and Hashing
 ![alt text](<1. 2 sum.png>)
 ![alt text](<217 contains duplicate.png>)
 ![alt text](<36 valid sudoku.png>)
@@ -9,9 +9,11 @@
 ![alt text](<347 top k freq elements.png>)
 ![alt text](<encode decode strings.png>)
 
-# Two Pointers:
+# Two Pointers
 
 ![alt text](<15 3Sum.png>)
 ![alt text](<167 two sum 2.png>)
 ![alt text](<125 Valid Palindrome.png>)
 ![alt text](<11 container with most water.png>)
+
+# Stack
