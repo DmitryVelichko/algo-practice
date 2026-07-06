@@ -32,3 +32,18 @@
 # n == height.length
 # 2 <= n <= 105
 # 0 <= height[i] <= 104
+
+# 2 Pointers, calculate and update max area: (r-l) * min(height[l], height[r])
+#  shift shortest pointer inward
+# O(n), O(1)
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        res = 0
+        l = 0
+        r = len(height) - 1
+        while l < r:
+            area = (r - l) * min(height[l], height[r])
+            res = max(res, area)
+            if height[r] >= height[l]: l += 1
+            else: r -= 1
+        return res
