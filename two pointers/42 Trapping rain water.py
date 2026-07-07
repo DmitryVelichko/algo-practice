@@ -25,3 +25,24 @@
 # n == height.length
 # 1 <= n <= 2 * 104
 # 0 <= height[i] <= 105
+
+# 2 pointers: how much water to trap at position i: min(max_Left_Height,max_R_H) - h[i]
+# to track the lower of the two boundary maximums, moving inward and adding the difference between that maximum and the current height to the total water.
+# O(n), O(1)
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        if not height: return 0
+
+        l, r = 0, len(height) - 1
+        leftMax, rightMax = height[l], height[r]
+        res = 0
+        while l < r:
+            if leftMax < rightMax:
+                l += 1
+                leftMax = max(leftMax, height[l])
+                res += leftMax - height[l]
+            else:
+                r -= 1
+                rightMax = max(rightMax, height[r])
+                res += rightMax - height[r]
+        return res
