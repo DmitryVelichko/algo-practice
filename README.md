@@ -15,5 +15,6 @@
 ![alt text](<167 two sum 2.png>)
 ![alt text](<125 Valid Palindrome.png>)
 ![alt text](<11 container with most water.png>)
+![alt text](<42 Trapping Rain Water.png>)
 
 # Stack
