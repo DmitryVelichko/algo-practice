@@ -50,3 +50,15 @@
 
 # 1 <= s.length <= 104
 # s consists of parentheses only '()[]{}'.
+
+# Stack, push opposite bracket to stack, closing bracket must equal the top bracket popped from stack, stack must be empty
+# O(n), O(n)
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        for char in s:
+            if(char == "("): stack.append(")")
+            elif(char == "["): stack.append("]")
+            elif(char == "{"): stack.append("}")
+            elif not stack or char != stack.pop(): return False
+        return len(stack) == 0
