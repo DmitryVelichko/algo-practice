@@ -16,6 +16,7 @@
 ![alt text](<125 Valid Palindrome.png>)
 ![alt text](<11 container with most water.png>)
 ![alt text](<42 Trapping Rain Water.png>)
-![alt text](<20 Valid Parentheses.png>)
 
 # Stack
+
+![alt text](<20 Valid Parentheses.png>)
