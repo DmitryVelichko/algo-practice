@@ -26,3 +26,27 @@
 
 # Output: true
 
+# Example 3:
+
+# Input: s = "(]"
+
+# Output: false
+
+# Example 4:
+
+# Input: s = "([])"
+
+# Output: true
+
+# Example 5:
+
+# Input: s = "([)]"
+
+# Output: false
+
+ 
+
+# Constraints:
+
+# 1 <= s.length <= 104
+# s consists of parentheses only '()[]{}'.
