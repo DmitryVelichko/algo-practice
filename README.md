@@ -20,4 +20,3 @@
 # Stack
 
 ![alt text](<20 Valid Parentheses.png>)
-![alt text](<739 Daily Temperatures.png>)
