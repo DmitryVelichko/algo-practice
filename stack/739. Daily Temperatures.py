@@ -27,3 +27,17 @@
 
 # 1 <= temperatures.length <= 105
 # 30 <= temperatures[i] <= 100
+
+# Stack, array of zeroes, if greater temperature pop index from stack and push i-index to res[index], append index to stack on each iteration
+# O(n), O(n)
+class Solution:
+    def dailyTemperatures(self, temps: List[int]) -> List[int]:
+        stack = []
+        res = [0] * len(temps)
+        for i in range(len(temps)):
+            while stack and temps[i] > temps[stack[-1]]:
+                index = stack.pop()
+                res[index] = i - index
+            stack.append(i)
+        return res
+        
