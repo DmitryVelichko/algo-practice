@@ -32,3 +32,21 @@
 # n == matrix[i].length
 # 1 <= m, n <= 100
 # -104 <= matrix[i][j], target <= 104
+
+# Binary search(one pass), entire matrix behaves like one big sorted array.
+# O(log(m * n)), O(1), m is number of rows, n of columns
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        ROWS, COLS = len(matrix), len(matrix[0])
+
+        l, r = 0, ROWS * COLS - 1
+        while l <= r:
+            m = (l+r) // 2
+            row, col = m // COLS, m % COLS
+            if target > matrix[row][col]:
+                l = m + 1
+            elif target < matrix[row][col]:
+                r = m - 1
+            else:
+                return True
+        return False
