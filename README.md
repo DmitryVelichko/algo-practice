@@ -27,3 +27,6 @@
 # Binary Search
 ![alt text](<704. Binary Search.png>)
 ![alt text](<74. Search a 2D Matrix.png>)
+
+# Trees
+![alt text](<226. Invert Binary Tree.png>)
