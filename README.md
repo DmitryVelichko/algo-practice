@@ -31,3 +31,4 @@
 # Trees
 ![alt text](<226. Invert Binary Tree.png>)
 ![alt text](<100. Same Tree.png>)
+![alt text](<104. Maximum Depth of Binary Tree.png>)
