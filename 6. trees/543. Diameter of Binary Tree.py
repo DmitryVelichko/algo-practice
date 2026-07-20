@@ -28,3 +28,28 @@
 
 # The number of nodes in the tree is in the range [1, 104].
 # -100 <= Node.val <= 100
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+# DFS() returns h, update maxDiameter (left subtree height + right subtree height)
+# T: O(n), S: O(h) - O(log n) for balanced tree, O(n) for unbalanced
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        res = 0
+        # function returns the height, not diameter
+        def dfs(root):
+            nonlocal res
+            if not root: return 0
+
+            left = dfs(root.left) # h of left subtree
+            right = dfs(root.right) # h of right subtree
+            res = max(res, left + right) # left + right = diameter of a tree
+
+            return 1 + max(left, right)
+
+        dfs(root)
+        return res
