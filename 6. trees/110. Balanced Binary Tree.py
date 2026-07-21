@@ -28,3 +28,25 @@
 
 # The number of nodes in the tree is in the range [0, 5000].
 # -104 <= Node.val <= 104
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+# DFS(), calculate heights of left and right subtrees, find the difference (must be <= 1)
+# O(n), O(h)
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        res = True
+        def dfs(node):
+            nonlocal res
+            if not node: return 0
+
+            left, right = dfs(node.left), dfs(node.right)
+            if abs(left - right) > 1: res = False
+            return max(left, right) + 1
+
+        dfs(root)
+        return res
