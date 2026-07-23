@@ -30,3 +30,7 @@
 
 # The number of nodes in the tree is in the range [1, 104].
 # -231 <= Node.val <= 231 - 1
+
+# DFS, check if node's value is in boundaries (-∞, +∞), left < node < right,
+# going left → tighten right boundary, going right → tighten left boundary
+# O(n), O(h)
