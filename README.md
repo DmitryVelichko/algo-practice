@@ -35,3 +35,4 @@
 ![alt text](<543. Diameter of Binary Tree.png>)
 ![alt text](<110. Balanced Binary Tree.png>)
 ![alt text](<572. Subtree of Another Tree.png>)
+![alt text](<98. Validate Binary Search Tree.png>)
