@@ -36,3 +36,4 @@
 ![alt text](<110. Balanced Binary Tree.png>)
 ![alt text](<572. Subtree of Another Tree.png>)
 ![alt text](<98. Validate Binary Search Tree.png>)
+![alt text](<1448. Count Good Nodes in Binary Tree.png>)
