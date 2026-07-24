@@ -40,3 +40,22 @@
 
 # The number of nodes in the binary tree is in the range [1, 10^5].
 # Each node's value is between [-10^4, 10^4].
+
+# DFS preorder, carry the maximum value seen so far on the current path.
+# If the current node’s value ≥ that maximum → it is a good node.
+# O(n), O(h)
+class Solution:
+    def goodNodes(self, root: TreeNode) -> int:
+
+        def dfs(node, maxSoFar):
+            if not node: return 0
+           
+            if node.val >= maxSoFar: res = 1
+            else: res = 0
+            
+            maxSoFar = max(maxSoFar, node.val)
+            res += dfs(node.left, maxSoFar)
+            res += dfs(node.right, maxSoFar)
+            return res
+
+        return dfs(root, root.val)
