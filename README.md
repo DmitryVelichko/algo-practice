@@ -28,6 +28,9 @@
 ![alt text](<704. Binary Search.png>)
 ![alt text](<74. Search a 2D Matrix.png>)
 
+# Sliding Window
+![alt text](<121. Best Time to Buy and Sell Stock.png>)
+
 # Trees
 ![alt text](<226. Invert Binary Tree.png>)
 ![alt text](<100. Same Tree.png>)
@@ -37,4 +40,3 @@
 ![alt text](<572. Subtree of Another Tree.png>)
 ![alt text](<98. Validate Binary Search Tree.png>)
 ![alt text](<1448. Count Good Nodes in Binary Tree.png>)
-![alt text](<121. Best Time to Buy and Sell Stock.png>)
