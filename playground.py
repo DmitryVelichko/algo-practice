@@ -53,3 +53,13 @@ class Solution:
 #         self.left = left
 #         self.right = right
 
+# DFS recursive pre-order: Time: O(n), Space: O(h), h = height (maximum depth) of the tree 
+# Balanced tree: O(log n), Skewed tree (linked list): O(n)
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root: return None
+        root.left, root.right = root.right, root.left
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+        return root
+        
