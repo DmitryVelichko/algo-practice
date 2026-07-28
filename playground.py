@@ -45,3 +45,11 @@ class Solution:
                     length += 1
                 longest = max(length, longest)
         return longest
+
+    # Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
