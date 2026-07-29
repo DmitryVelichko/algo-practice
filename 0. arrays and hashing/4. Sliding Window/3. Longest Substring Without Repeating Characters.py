@@ -31,3 +31,18 @@
 
 # 0 <= s.length <= 105
 # s consists of English letters, digits, symbols and spaces.
+# Sliding window. Set, two pointers, if char is in set, remove it and update left pointer,on every iteration add char to set and update max length
+# O(n), O(n), 1 million unicode chars
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        charSet = set()
+        l = 0
+        maxLen = 0
+
+        for r in range(len(s)):
+            while s[r] in charSet:
+                charSet.remove(s[l])
+                l += 1
+            charSet.add(s[r])
+            maxLen = max(maxLen, len(charSet))
+        return maxLen      
