@@ -32,6 +32,9 @@
 ![alt text](<121. Best Time to Buy and Sell Stock.png>)
 ![alt text](<3. Longest Substring Without Repeating Characters.png>)
 
+# Linked List
+![alt text](<141. Linked List Cycle.png>)
+
 # Trees
 ![alt text](<226. Invert Binary Tree.png>)
 ![alt text](<100. Same Tree.png>)
