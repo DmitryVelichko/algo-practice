@@ -43,7 +43,7 @@
 
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, x):
+#     def __init__(self, x): 
 #         self.val = x
 #         self.next = None
 # Fast, slow pointers = head, while fast and fast.next, move slow.next and fast.next.next
