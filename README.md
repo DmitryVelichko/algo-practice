@@ -34,6 +34,7 @@
 
 # Linked List
 ![alt text](<141. Linked List Cycle.png>)
+![alt text](<206. Reverse Linked List.png>)
 
 # Trees
 ![alt text](<226. Invert Binary Tree.png>)
