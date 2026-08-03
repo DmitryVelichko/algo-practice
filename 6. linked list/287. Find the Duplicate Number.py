@@ -37,3 +37,19 @@
 
 # How can we prove that at least one duplicate number must exist in nums?
 # Can you solve the problem in linear runtime complexity?
+
+# Linked list cycle, slow fast pointers, Floyd's algorithm (2 slow pointers, p - x = 0)
+# O(n), O(1)
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        slow, fast = 0, 0
+        while True:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+            if slow == fast: break
+
+        slow2 = 0
+        while True:
+            slow = nums[slow]
+            slow2 = nums[slow2]
+            if slow == slow2: return slow
