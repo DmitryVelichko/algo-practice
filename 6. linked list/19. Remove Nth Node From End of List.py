@@ -33,3 +33,26 @@
  
 
 # Follow up: Could you do this in one pass?
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+# Dummy node, 2 pointers, l->dummy, r->head, shift right n times, shift l & r by 1 step
+# until right is None, delete node (l->l.next.next), return dummy.next
+# O(n), O(1)
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        dummy = ListNode(0, head)
+        left = dummy
+        right = head
+        while n > 0 and right:
+            right = right.next
+            n -= 1
+        while right:
+            right = right.next
+            left = left.next
+        left.next = left.next.next
+        return dummy.next
