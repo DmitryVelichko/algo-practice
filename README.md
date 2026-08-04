@@ -36,6 +36,7 @@
 ![alt text](<141. Linked List Cycle.png>)
 ![alt text](<206. Reverse Linked List.png>)
 ![alt text](<287. Find the Duplicate Number.png>)
+![alt text](<19. Remove Nth Node From End of List.png>)
 
 # Trees
 ![alt text](<226. Invert Binary Tree.png>)
