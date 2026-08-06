@@ -43,3 +43,31 @@
 # 0 <= n <= 1000
 # -104 <= Node.val <= 104
 # Node.random is null or is pointing to some node in the linked list.
+
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
+"""
+# Two passes: 1st pass - copy nodes without links, hashmap (original node -> copied node)
+# 2nd pass: connect all pointers
+# O(n), O(n) *this solution can be optimized to be O(1) space*
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        oldToCopy = {None: None}
+
+        cur = head
+        while cur:
+            copy = Node(cur.val)
+            oldToCopy[cur] = copy
+            cur = cur.next
+        cur = head
+        while cur:
+            copy = oldToCopy[cur]
+            copy.next = oldToCopy[cur.next]
+            copy.random = oldToCopy[cur.random]
+            cur = cur.next
+        return oldToCopy[head]
