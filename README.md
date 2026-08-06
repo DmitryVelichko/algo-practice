@@ -38,6 +38,7 @@
 ![alt text](<287. Find the Duplicate Number.png>)
 ![alt text](<19. Remove Nth Node From End of List.png>)
 ![alt text](<21. Merge Two Sorted Lists.png>)
+![alt text](<138. Copy List with Random Pointer.png>)
 
 
 # Trees
