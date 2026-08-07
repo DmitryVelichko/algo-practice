@@ -30,3 +30,34 @@
 
 # The number of nodes in the list is in the range [1, 5 * 104].
 # 1 <= Node.val <= 1000
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+# Find middle of LL (slow & fast), reverse second half, merge nodes from each side in turn
+# O(n), O(1)
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        # find middle
+        slow, fast = head, head.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        # reverse second half:
+        second, prev = slow.next, None
+        slow.next = None
+        while second:
+            tmp = second.next
+            second.next = prev
+            prev = second
+            second = tmp
+        # merge two halves
+        first = head
+        second = prev
+        while second:
+            tmp1, tmp2 = first.next, second.next
+            first.next = second
+            second.next = tmp1
+            first, second = tmp1, tmp2
