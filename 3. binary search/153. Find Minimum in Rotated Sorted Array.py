@@ -41,3 +41,17 @@
 # -5000 <= nums[i] <= 5000
 # All the integers of nums are unique.
 # nums is sorted and rotated between 1 and n times.
+
+# Binary search, if middle element < rightmost element: we don't need right part,
+# min val is to the left, else: minval is to the right
+# O(log n), O(1)
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        l, r = 0, len(nums) - 1
+        while l < r:
+            m = l + (r - l) // 2
+            if nums[m] < nums[r]:
+                r = m
+            else:
+                l = m + 1
+        return nums[l]
