@@ -36,3 +36,25 @@
 # nums is an ascending array that is possibly rotated.
 # -104 <= target <= 104
  
+# Binary search 1 pass
+# O(log n), O(1)
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l, r = 0, len(nums) - 1
+
+        while l <= r:
+            mid = (l + r) // 2
+            if target == nums[mid]: return mid
+            # if we are in the left sorted half of array
+            if nums[l] <= nums[mid]:
+                # search right
+                if target > nums[mid] or target < nums[l]: l = mid + 1
+                # search left
+                else: r = mid - 1
+            # if we are in the right sorted half of array
+            else:
+                # search left
+                if target < nums[mid] or target > nums[r]: r = mid - 1
+                # search right
+                else: l = mid + 1
+        return -1
