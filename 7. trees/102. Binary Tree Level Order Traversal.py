@@ -28,3 +28,11 @@
 
 # The number of nodes in the tree is in the range [0, 2000].
 # -1000 <= Node.val <= 1000
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+# BFS: O(n), O(n/2) => O(n) - In a perfect binary tree, the bottom leaf level contains roughly half of all the nodes in the entire tree (n/2 nodes)
