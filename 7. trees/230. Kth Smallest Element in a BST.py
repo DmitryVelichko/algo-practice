@@ -29,3 +29,25 @@
  
 
 # Follow up: If the BST is modified often (i.e., we can do insert and delete operations) and you need to find the kth smallest frequently, how would you optimize?
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+# DFS in-order (left -> node -> right) gives nodes in sorted order.
+# Push all left nodes (go as deep as possible). Pop the top node - this is the next smallest value. Move to its right subtree and repeat. When we pop the k-th node, that's our answer. + Morris Traversal (O(n), O(1))
+# O(n), O(n)
+class Solution:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        stack = []
+        curr = root
+        while stack or curr:
+            while curr:
+                stack.append(curr)
+                curr = curr.left
+            curr = stack.pop()
+            k -= 1
+            if k == 0: return curr.val
+            curr = curr.right
