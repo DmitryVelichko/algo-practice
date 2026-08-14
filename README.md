@@ -54,3 +54,4 @@
 ![alt text](<98. Validate Binary Search Tree.png>)
 ![alt text](<1448. Count Good Nodes in Binary Tree.png>)
 ![alt text](<102. Binary Tree Level Order Traversal.png>)
+![alt text](<230. Kth Smallest Element in a BST.png>)
