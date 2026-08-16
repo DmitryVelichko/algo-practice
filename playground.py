@@ -13,3 +13,11 @@
  
 # Sliding window, itertate and update minPrice and maxProfit (current price - minPrice)
 # O(n), O(1)
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        minPrice = prices[0] 
+        maxProfit = 0
+        for price in prices:
+            minPrice = min(minPrice, price)
+            maxProfit = max(maxProfit, price - minPrice)
+        return maxProfit
