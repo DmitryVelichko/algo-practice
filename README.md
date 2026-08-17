@@ -56,3 +56,6 @@
 ![alt text](<1448. Count Good Nodes in Binary Tree.png>)
 ![alt text](<102. Binary Tree Level Order Traversal.png>)
 ![alt text](<230. Kth Smallest Element in a BST.png>)
+
+# Trie
+![alt text](<208. Implement Trie (Prefix Tree).png>)
