@@ -36,3 +36,18 @@
 # 1 <= word.length, prefix.length <= 2000
 # word and prefix consist only of lowercase English letters.
 # At most 3 * 104 calls in total will be made to insert, search, and startsWith.
+
+# O(n) for each function call, n = string's length, O(t): total number of TrieNodes in Trie
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.endOfWord = False
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+    def insert(self, word: str) -> None:
+        cur = self.root
+        for c in word:
+            if c not in cur.children: cur.children[c] = TrieNode()
+            cur = cur.children[c]
+        cur.endOfWord = True
