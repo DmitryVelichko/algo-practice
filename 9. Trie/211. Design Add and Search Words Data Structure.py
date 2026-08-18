@@ -40,3 +40,20 @@
 # word in search consist of '.' or lowercase English letters.
 # There will be at most 2 dots in word for search queries.
 # At most 104 calls will be made to addWord and search.
+
+# DFS Trie
+# Time: O(n), Space: O(t+n) n = string length, t=number of TrieNodes in Trie
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.word = False
+class WordDictionary:
+    def __init__(self):
+        self.root = TrieNode()
+    def addWord(self, word: str) -> None:
+        cur = self.root
+        for c in word:
+            if c not in cur.children:
+                cur.children[c] = TrieNode()
+            cur = cur.children[c]
+        cur.word = True
