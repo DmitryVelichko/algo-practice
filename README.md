@@ -60,3 +60,6 @@
 # Trie
 ![alt text](<208. Implement Trie (Prefix Tree).png>)
 ![alt text](<211. Design Add and Search Words Data Structure.png>)
+
+# Heap
+![alt text](<1046. Last Stone Weight.png>)
