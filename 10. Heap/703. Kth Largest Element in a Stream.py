@@ -30,3 +30,29 @@
 # kthLargest.add(10); // return 5
 # kthLargest.add(9); // return 8
 # kthLargest.add(4); // return 8
+
+# Example 2:
+
+# Input:
+# ["KthLargest", "add", "add", "add", "add"]
+# [[4, [7, 7, 7, 7, 8, 3]], [2], [10], [9], [9]]
+
+# Output: [null, 7, 7, 7, 8]
+
+# Explanation:
+
+# KthLargest kthLargest = new KthLargest(4, [7, 7, 7, 7, 8, 3]);
+# kthLargest.add(2); // return 7
+# kthLargest.add(10); // return 7
+# kthLargest.add(9); // return 7
+# kthLargest.add(9); // return 8
+ 
+
+# Constraints:
+
+# 0 <= nums.length <= 104
+# 1 <= k <= nums.length + 1
+# -104 <= nums[i] <= 104
+# -104 <= val <= 104
+# At most 104 calls will be made to add.
+
