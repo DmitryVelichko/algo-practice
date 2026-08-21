@@ -26,3 +26,15 @@
 
 # 1 <= k <= nums.length <= 105
 # -104 <= nums[i] <= 104
+
+# Sorting: O(n log n), O(n)/O(1) depending on sorting algo
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        nums.sort()
+        return nums[len(nums) - k]
+# Min-heap: O(n log k), O(k)
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        heapq.heapify(nums)
+        while k < len(nums):
+            heapq.heappop(nums)
+        return nums[0]
