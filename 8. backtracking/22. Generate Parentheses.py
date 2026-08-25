@@ -22,3 +22,23 @@
 
 # 1 <= n <= 8
  
+# Backtracking:
+# 1 if open == close == n, then we can append string to result
+# 2 if open < n add (
+# 3 if open > close add )
+# O(2^n), O(n)
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
+        res = []
+
+        def backtrack(open, close, strng):
+            if open == close == n:
+                res.append(strng)
+                return
+            if n > open:
+                backtrack(open + 1, close, strng + "(")
+            if open > close:
+                backtrack(open, close + 1, strng + ")")
+
+        backtrack(0, 0, "")
+        return res
