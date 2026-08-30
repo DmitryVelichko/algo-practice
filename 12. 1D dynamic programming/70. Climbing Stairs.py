@@ -31,3 +31,16 @@
 # Constraints:
 
 # 1 <= n <= 45
+
+# DP. Fibonacci, at any step, the number of ways depends only on the previous two steps. One -> ways to reach the current step, two -> ways to reach the previous step, Start both as 1 (base case). Repeat n - 1 times: new ways = one + two & shift variables forward. Return one. 
+# O(n), O(1)
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        one, two = 1, 1
+
+        for i in range(n - 1):
+            temp = one
+            one = one + two
+            two = temp
+
+        return one
