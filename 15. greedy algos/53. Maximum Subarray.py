@@ -30,3 +30,16 @@
 # 1 <= nums.length <= 105
 # -104 <= nums[i] <= 104
 
+# Greedy Algo. We want the maximum sum of a contiguous subarray.
+# If curSum becomes negative, reset it to 0 (start a new subarray).
+# O(n), O(1)
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        maxSub, curSum = nums[0], 0
+        for num in nums:
+            if curSum < 0:
+                curSum = 0
+            curSum += num
+            maxSub = max(maxSub, curSum)
+        return maxSub
+ 
