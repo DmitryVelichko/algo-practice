@@ -77,3 +77,6 @@
 
 # 1D Dynamic Programming
 ![alt text](<70. Climbing Stairs.png>)
+
+# Greedy
+![alt text](<53. Maximum Subarray.png>)
