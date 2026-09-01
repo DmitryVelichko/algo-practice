@@ -25,3 +25,24 @@
 
 # 0 <= intervals.length <= 500
 # 0 <= intervals[i].start < intervals[i].end <= 1,000,000
+
+"""
+Definition of Interval:
+class Interval(object):
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+"""
+# Sort intervals by start time, if i1.end > i2.start => False
+# O(n log n), O(1)/O(n) depending on sorting algo
+class Solution:
+    def canAttendMeetings(self, intervals: List[Interval]) -> bool:
+        intervals.sort(key=lambda i: i.start)
+
+        for i in range(1, len(intervals)):
+            i1 = intervals[i - 1]
+            i2 = intervals[i]
+
+            if i1.end > i2.start:
+                return False
+        return True
