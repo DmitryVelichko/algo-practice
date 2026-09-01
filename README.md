@@ -80,3 +80,6 @@
 
 # Greedy
 ![alt text](<53. Maximum Subarray.png>)
+
+# Intervals
+![alt text](<Meeting Rooms.png>)
