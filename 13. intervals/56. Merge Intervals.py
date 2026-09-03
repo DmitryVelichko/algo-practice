@@ -30,3 +30,21 @@
 # 1 <= intervals.length <= 104
 # intervals[i].length == 2
 # 0 <= starti <= endi <= 104
+
+# Sort array of intervals by start time,  Let lastEnd be the end of the last interval in output,
+# if current interval overlaps with the last one (start <= lastEnd): Merge them by updating the end;
+# otherwise (no overlap): append the current interval to output as a new interval
+# Time: O(n log n), Space: O(1)/O(n) depending on sorting algo, O(n) for output list
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals.sort(key=lambda pair: pair[0])
+        output = [intervals[0]]
+
+        for start, end in intervals:
+            lastEnd = output[-1][1]
+
+            if start <= lastEnd:
+                output[-1][1] = max(lastEnd, end)
+            else:
+                output.append([start, end])
+        return output
