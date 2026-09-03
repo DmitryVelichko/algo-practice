@@ -83,6 +83,7 @@
 
 # Intervals
 ![alt text](<Meeting Rooms.png>)
+![alt text](<56. Merge Intervals.png>)
 
 # Math and Geometry
 ![alt text](<202. Happy Number.png>)
