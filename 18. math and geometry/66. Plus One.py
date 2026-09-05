@@ -38,3 +38,18 @@
 # 1 <= digits.length <= 100
 # 0 <= digits[i] <= 9
 # digits does not contain any leading 0's.
+
+# Traverse the array backwards, If digits[i] < 9: increment by one, return digits
+# Else: set digits[i] = 0 and continue to the next digit on the left, return [1] + digits
+#O(n), O(1)
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        for i in range(len(digits) - 1, -1, -1):
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+            digits[i] = 0
+        # Space - O(n) becuase it creates a new list
+        # return [1] + digits
+        digits.insert(0, 1)
+        return digits
