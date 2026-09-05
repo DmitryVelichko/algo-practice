@@ -88,3 +88,4 @@
 
 # Math and Geometry
 ![alt text](<202. Happy Number.png>)
+![alt text](<66 Plus one.png>)
