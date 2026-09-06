@@ -30,3 +30,20 @@
 # n is an integer.
 # Either x is not zero or n > 0.
 # -104 <= xn <= 104
+
+# Divide and conquer, square the base (x) and halve the exponent (n): 2^10=(2^2)^5 
+# Negative pow: 3^-2 = 1/(3*3) 
+# O(log n), O(log n) for recurstion stack
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        def helper(x, n):
+            if x == 0:
+                return 0
+            if n == 0:
+                return 1
+
+            res = helper(x * x, n // 2)
+            return x * res if n % 2 else res
+
+        res = helper(x, abs(n))
+        return res if n >= 0 else 1 / res
