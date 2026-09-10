@@ -35,3 +35,11 @@
 # 1 <= n <= 1000
 # 1 <= nums[i] <= 1000
 
+# O(n), O(n)
+class Solution:
+    def getConcatenation(self, nums: List[int]) -> List[int]:
+        ans = []
+        for i in range(2):
+            for num in nums:
+                ans.append(num)
+        return ans
