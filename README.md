@@ -1,5 +1,6 @@
 # Arrays and Hashing
 ![alt text](<1. Two Sum.png>)
+![alt text](<217. Contains Duplicate.png>)
 
 # Two Pointers
 
