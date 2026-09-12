@@ -36,3 +36,14 @@
 
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
+
+func containsDuplicate(nums []int) bool {
+	seen := make(map[int]bool)
+	for _, num := range nums {
+		if seen[num] {
+			return true
+		}
+		seen[num] = true
+	}
+	return false
+}
