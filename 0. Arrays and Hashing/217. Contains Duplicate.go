@@ -37,6 +37,9 @@
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
 
+package main
+
+// O(n), O(n)
 func containsDuplicate(nums []int) bool {
 	seen := make(map[int]bool)
 	for _, num := range nums {
