@@ -24,4 +24,28 @@
 // s and t consist of lowercase English letters.
 
 // Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
 package main
+
+// Hasmap, map runes and frequency("a": 0++ and "a": 0--), must be all 0s.
+// O(n), O(n+k) - n coz of rune slices and map, k = number of distinct chars, supports unicode chars
+func isAnagram(s string, t string) bool {
+	sRunes := []rune(s)
+	tRunes := []rune(t)
+
+	if len(sRunes) != len(tRunes) {
+		return false
+	}
+	hash := make(map[rune]int)
+	for i := range sRunes {
+		hash[sRunes[i]]++
+		hash[tRunes[i]]--
+	}
+
+	for key := range hash {
+		if hash[key] != 0 {
+			return false
+		}
+	}
+	return true
+}
