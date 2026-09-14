@@ -26,6 +26,7 @@
 
 package main
 
+// Character 0: Check string 1, check string 2... etc
 // O(n*m), n=number of strings, m=length of the shortest string, Space: O(1)
 func longestCommonPrefix(strs []string) string {
 	for i := 0; i < len(strs[0]); i++ {
