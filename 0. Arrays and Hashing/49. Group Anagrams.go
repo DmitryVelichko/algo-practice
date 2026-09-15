@@ -36,3 +36,23 @@
 // strs[i] consists of lowercase English letters.
 
 package main
+
+// O(n * k), n - number of strs, k - length of the longest string, O(n*k) - coz of hasmap of arrays
+// Frequency array of 26 chars: [0++,1++,0++...], hashamp {"1110...": ["bac", "cab"]}
+func groupAnagrams(strs []string) [][]string {
+	hash := make(map[[26]int][]string)
+
+	for _, str := range strs {
+		var freqArr [26]int
+		for _, char := range str {
+			freqArr[char-'a']++
+		}
+		hash[freqArr] = append(hash[freqArr], str)
+	}
+
+	var result [][]string
+	for _, group := range hash {
+		result = append(result, group)
+	}
+	return result
+}
