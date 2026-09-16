@@ -3,6 +3,7 @@
 ![alt text](<217. Contains Duplicate.png>)
 ![alt text](<242. Valid Anagram.png>)
 ![alt text](<49. Group Anagrams-1.png>)
+![alt text](<169. Majority Element.png>)
 
 # Two Pointers
 
