@@ -27,3 +27,23 @@
 // Follow-up: Could you solve the problem in linear time and in O(1) space?
 
 package main
+
+// Boyer-Moore Voting Algorithm (if majority element is guaranteed)
+// O(n), O(1)
+func majorityElement(nums []int) int {
+	var candidate int
+	count := 0
+
+	for _, num := range nums {
+		if count == 0 {
+			candidate = num
+		}
+		if candidate == num {
+			count++
+		} else {
+			count--
+
+		}
+	}
+	return candidate
+}
