@@ -39,3 +39,21 @@
 // Follow up: Could you come up with a one-pass algorithm using only constant extra space?
 
 package main
+
+// When we see a 0, we swap it to the left section. When we see a 2, we swap it to the right section.
+// 1s naturally end up in the middle.
+// O(n), O(1)
+func sortColors(nums []int) {
+	i, l, r := 0, 0, len(nums)-1
+	for i <= r {
+		if nums[i] == 0 {
+			nums[l], nums[i] = nums[i], nums[l]
+			l++
+		} else if nums[i] == 2 {
+			nums[i], nums[r] = nums[r], nums[i]
+			r--
+			i--
+		}
+		i++
+	}
+}
