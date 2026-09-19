@@ -6,7 +6,7 @@
 ![alt text](<169. Majority Element.png>)
 
 # Two Pointers
-
+![alt text](<344. Reverse String.png>)
 
 # Stack
 
