@@ -29,3 +29,21 @@
 // Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
 
 package main
+
+// Iterate through the array in order and in reverse to compute the products
+// O(n), O(n) if output array does not count as extra space - O(1)
+
+func productExceptSelf(nums []int) []int {
+	res := make([]int, len(nums))
+	prefix, postfix := 1, 1
+
+	for i := range nums {
+		res[i] = prefix
+		prefix *= nums[i]
+	}
+	for i := len(nums) - 1; i >= 0; i-- {
+		res[i] *= postfix
+		postfix *= nums[i]
+	}
+	return res
+}
