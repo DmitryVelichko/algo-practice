@@ -6,6 +6,7 @@
 ![alt text](<169. Majority Element.png>)
 ![alt text](<238. Product of Array Except Self.png>)
 ![alt text](<347. Top K Frequent Elements.png>)
+![alt text](<128. Longest Consecutive Sequence.png>)
 
 # Two Pointers
 ![alt text](<344. Reverse String.png>)
