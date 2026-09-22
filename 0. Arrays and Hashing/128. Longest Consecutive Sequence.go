@@ -39,7 +39,7 @@ func longestConsecutive(nums []int) int {
 	}
 
 	for num := range numSet {
-		// check if it's the start of a sequence
+		// check if it's the start of a sequence, update longest
 		if _, found := numSet[num-1]; !found {
 			length := 1
 			for {
