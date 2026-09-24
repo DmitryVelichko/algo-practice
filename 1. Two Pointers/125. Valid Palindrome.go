@@ -56,6 +56,12 @@ func isPalindrome(s string) bool {
 	return true
 }
 
+// func isAlphaNum(c rune) bool {
+//     return unicode.IsLetter(c) || unicode.IsDigit(c)
+// }
+
 func isAlphaNum(c rune) bool {
-	return unicode.IsLetter(c) || unicode.IsDigit(c)
+	return ('A' <= c && c <= 'Z') ||
+		('a' <= c && c <= 'z') ||
+		('0' <= c && c <= '9')
 }
