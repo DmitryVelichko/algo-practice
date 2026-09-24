@@ -11,6 +11,7 @@
 
 # Two Pointers
 ![alt text](<344. Reverse String.png>)
+![alt text](<125. Valid Palindrome.png>)
 
 # Stack
 
