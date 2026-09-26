@@ -41,6 +41,8 @@
 
 package main
 
+import "strings"
+
 // O(n+m), O(n+m): n,m = length of w1 and w2 strings
 func mergeAlternately(word1 string, word2 string) string {
 	res := make([]byte, 0, len(word1)+len(word2))
