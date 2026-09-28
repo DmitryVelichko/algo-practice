@@ -15,6 +15,7 @@
 ![alt text](<680. Valid Palindrome II.png>)
 ![alt text](<1768. Merge Strings Alternately.png>)
 ![alt text](<88. Merge Sorted Array.png>)
+![alt text](<26. Remove Duplicates from Sorted Array.png>)
 
 # Stack
 
