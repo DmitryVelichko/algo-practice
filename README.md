@@ -16,6 +16,7 @@
 ![alt text](<1768. Merge Strings Alternately.png>)
 ![alt text](<88. Merge Sorted Array.png>)
 ![alt text](<26. Remove Duplicates from Sorted Array.png>)
+![alt text](<167. Two Sum II - Input Array Is Sorted.png>)
 
 # Stack
 
