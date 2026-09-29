@@ -39,3 +39,21 @@
 // The tests are generated such that there is exactly one solution.
 
 package main
+
+// Two pointers, if the current sum is too big, moving the right pointer left makes the sum smaller.
+// If the sum is too small, moving the left pointer right makes the sum larger.
+// O(n), O(1)
+func twoSum(nums []int, target int) []int {
+	l, r := 0, len(nums)-1
+
+	for l < r {
+		if nums[l]+nums[r] > target {
+			r--
+		} else if nums[l]+nums[r] < target {
+			l++
+		} else {
+			return []int{l + 1, r + 1}
+		}
+	}
+	return []int{}
+}
