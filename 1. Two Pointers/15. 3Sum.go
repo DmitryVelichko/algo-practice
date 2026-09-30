@@ -42,7 +42,7 @@ import "slices"
 // Sort array, skip duplicates, threeSum + 2 pointers, skip duplicates
 // O(n^2), O(n)
 func threeSum(nums []int) [][]int {
-	slices.Ints(nums)
+	slices.Sort(nums)
 	res := [][]int{}
 	for i := range nums {
 		if i > 0 && nums[i] == nums[i-1] {
