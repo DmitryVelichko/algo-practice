@@ -18,6 +18,7 @@
 ![alt text](<26. Remove Duplicates from Sorted Array.png>)
 ![alt text](<167. Two Sum II - Input Array Is Sorted.png>)
 ![alt text](<15. 3Sum.png>)
+![alt text](<189. Rotate Array.png>)
 
 # Stack
 
