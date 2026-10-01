@@ -38,3 +38,19 @@ package main
 
 //	Reverse the entire array, reverse the first k elements, reverse the remaining elements.
 //
+// O(n), O(1)
+func rotate(nums []int, k int) {
+	k = k % len(nums) // strip away all useless full-circle rotations
+
+	reverse := func(l, r int) {
+		for l < r {
+			nums[l], nums[r] = nums[r], nums[l]
+			l++
+			r--
+		}
+	}
+
+	reverse(0, len(nums)-1)
+	reverse(0, k-1)
+	reverse(k, len(nums)-1)
+}
