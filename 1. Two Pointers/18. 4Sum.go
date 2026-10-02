@@ -30,3 +30,42 @@
 package main
 
 import "slices"
+
+// O(n^3), Space: O(n) + O(m) for output array (m = number of quadruplets)
+func fourSum(nums []int, target int) [][]int {
+	slices.Sort(nums)
+	res := [][]int{}
+
+	for i := 0; i < len(nums); i++ {
+		if i > 0 && nums[i] == nums[i-1] {
+			continue
+		}
+
+		for j := i + 1; j < len(nums); j++ {
+			if j > i+1 && nums[j] == nums[j-1] {
+				continue
+			}
+
+			left, right := j+1, len(nums)-1
+			for left < right {
+				sum := nums[i] + nums[j] + nums[left] + nums[right]
+				if sum == target {
+					res = append(res, []int{nums[i], nums[j], nums[left], nums[right]})
+					left++
+					right--
+					for left < right && nums[left] == nums[left-1] {
+						left++
+					}
+					for left < right && nums[right] == nums[right+1] {
+						right--
+					}
+				} else if sum < target {
+					left++
+				} else {
+					right--
+				}
+			}
+		}
+	}
+	return res
+}
