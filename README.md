@@ -19,7 +19,7 @@
 ![alt text](<167. Two Sum II - Input Array Is Sorted.png>)
 ![alt text](<15. 3Sum.png>)
 ![alt text](<189. Rotate Array.png>)
-![alt text](<18. 4Sum.png>)
+![alt text](<18. 4Sum-1.png>)
 
 # Stack
 
