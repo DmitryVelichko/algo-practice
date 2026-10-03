@@ -48,3 +48,30 @@
 // 1 <= s.length <= 104
 // s consists of parentheses only '()[]{}'.
 package main
+
+// Stack, push opposite bracket to stack,
+// closing bracket must equal the top bracket popped from stack, stack must be empty
+// O(n), O(n)
+
+func isValid(s string) bool {
+	stack := []rune{}
+	for _, c := range s {
+		if c == '{' {
+			stack = append(stack, '}')
+		} else if c == '[' {
+			stack = append(stack, ']')
+		} else if c == '(' {
+			stack = append(stack, ')')
+		} else {
+			if len(stack) == 0 {
+				return false
+			}
+			top := stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+			if top != c {
+				return false
+			}
+		}
+	}
+	return len(stack) == 0
+}
