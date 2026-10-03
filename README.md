@@ -22,7 +22,7 @@
 ![alt text](<18. 4Sum-1.png>)
 
 # Stack
-
+![alt text](<20. Valid Parentheses.png>)
 
 # Binary Search
 
