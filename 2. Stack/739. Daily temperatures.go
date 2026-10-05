@@ -26,3 +26,21 @@
 // 30 <= temperatures[i] <= 100
 
 package main
+
+// Stack, array of zeroes, if current temperature > temperature in stack, pop stackIndex from stack
+// and push (i minus stackIndex) to res[stackIndex], append current index to stack on each iteration
+// O(n), O(n)
+func dailyTemperatures(temps []int) []int {
+	res := make([]int, len(temps))
+	stack := []int{}
+
+	for i, t := range temps {
+		for len(stack) > 0 && t > temps[stack[len(stack)-1]] {
+			stackIndx := stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+			res[stackIndx] = i - stackIndx
+		}
+		stack = append(stack, i)
+	}
+	return res
+}
