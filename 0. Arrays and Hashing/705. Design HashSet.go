@@ -39,3 +39,23 @@ package main
 
 // Time complexity: O(1) for each function call.
 // Space complexity: O(1000000) since the key is in the range [0,1000000].
+
+type MyHashSet struct {
+	data []bool
+}
+
+func Constructor() MyHashSet {
+	return MyHashSet{data: make([]bool, 1000001)}
+}
+
+func (this *MyHashSet) Add(key int) {
+	this.data[key] = true
+}
+
+func (this *MyHashSet) Remove(key int) {
+	this.data[key] = false
+}
+
+func (this *MyHashSet) Contains(key int) bool {
+	return this.data[key]
+}
