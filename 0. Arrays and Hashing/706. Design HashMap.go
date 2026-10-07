@@ -38,3 +38,29 @@
 // At most 104 calls will be made to put, get, and remove.
 
 package main
+
+// Time: O(1) for each function call,
+// Space: O(1 million) since key is in range [0,1_000_000]
+type MyHashMap struct {
+	data []int
+}
+
+func Constructor_HashMap() MyHashMap {
+	data := make([]int, 1000001)
+	for i := range data {
+		data[i] = -1
+	}
+	return MyHashMap{data: data}
+}
+
+func (this *MyHashMap) Put(key int, value int) {
+	this.data[key] = value
+}
+
+func (this *MyHashMap) Get(key int) int {
+	return this.data[key]
+}
+
+func (this *MyHashMap) Remove(key int) {
+	this.data[key] = -1
+}
