@@ -27,6 +27,7 @@
 ![alt text](<739. Daily Temperatures.png>)
 
 # Binary Search
+![alt text](<704. Binary Search.png>)
 
 
 # Sliding Window
