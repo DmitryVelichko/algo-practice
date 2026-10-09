@@ -28,6 +28,7 @@
 
 # Binary Search
 ![alt text](<704. Binary Search.png>)
+![alt text](<35. Search Insert Position.png>)
 
 
 # Sliding Window
