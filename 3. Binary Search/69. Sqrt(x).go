@@ -26,3 +26,25 @@
 
 // 0 <= x <= 231 - 1
 
+package main
+
+// If m * m < x, m is a valid candidate.
+// Store it in res and search for a larger value by setting l = m + 1.
+// O(log n), O(1)
+func mySqrt(x int) int {
+	l, r := 0, x
+	res := 0
+
+	for l <= r {
+		m := l + (r-l)/2
+		if m*m > x {
+			r = m - 1
+		} else if m*m < x {
+			l = m + 1
+			res = m
+		} else {
+			return m
+		}
+	}
+	return res
+}
