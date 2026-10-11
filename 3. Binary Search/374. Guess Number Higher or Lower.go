@@ -46,6 +46,9 @@ package main
  * func guess(num int) int;
  */
 // O(log n), O(1)
+
+func guess(num int) int
+
 func guessNumber(n int) int {
 	l, r := 1, n
 	for {
