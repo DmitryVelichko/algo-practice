@@ -17,5 +17,22 @@
 // 0: your guess is equal to the number I picked (i.e. num == pick).
 // Return the number that I picked.
 
- 
+// Example 1:
 
+// Input: n = 10, pick = 6
+// Output: 6
+// Example 2:
+
+// Input: n = 1, pick = 1
+// Output: 1
+// Example 3:
+
+// Input: n = 2, pick = 1
+// Output: 1
+
+// Constraints:
+
+// 1 <= n <= 231 - 1
+// 1 <= pick <= n
+
+package main
