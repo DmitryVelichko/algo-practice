@@ -26,3 +26,22 @@ package main
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
 // 0 <= k <= 105
+
+// Sliding window, hashset to maintain window
+// O(n), O(k) k is the max distance between 2 equal numbers
+func containsNearbyDuplicate(nums []int, k int) bool {
+	window := make(map[int]bool)
+	l := 0
+
+	for r := 0; r < len(nums); r++ {
+		if r-l > k {
+			delete(window, nums[l])
+			l++
+		}
+		if window[nums[r]] {
+			return true
+		}
+		window[nums[r]] = true
+	}
+	return false
+}
