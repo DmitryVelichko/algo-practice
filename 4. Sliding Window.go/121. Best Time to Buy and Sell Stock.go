@@ -28,3 +28,15 @@
 // 0 <= prices[i] <= 104
 
 package main
+
+// Sliding window, itertate and update minPrice and maxProfit (current price - minPrice)
+// O(n), O(1)
+func maxProfit(prices []int) int {
+	minPrice := prices[0]
+	maxProfit := 0
+	for _, price := range prices {
+		minPrice = min(minPrice, price)
+		maxProfit = max(maxProfit, price-minPrice)
+	}
+	return maxProfit
+}
