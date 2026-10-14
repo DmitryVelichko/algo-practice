@@ -25,3 +25,18 @@
 
 // Follow up: Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 109, and you want to check one by one to see if t has its subsequence. In this scenario, how would you change your code?
 package main
+
+// 2 pointers for s and t at 0 index, compare chars and increment until out of bounds.
+// O(n), O(1)
+func isSubsequence(s string, t string) bool {
+	sPointer := 0
+	tPointer := 0
+
+	for sPointer < len(s) && tPointer < len(t) {
+		if s[sPointer] == t[tPointer] {
+			sPointer++
+		}
+		tPointer++
+	}
+	return sPointer == len(s)
+}
