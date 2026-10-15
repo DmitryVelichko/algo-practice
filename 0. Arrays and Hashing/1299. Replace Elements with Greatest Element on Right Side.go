@@ -32,3 +32,15 @@
 // 1 <= arr[i] <= 105
 
 package main
+
+// reverse iteration, initial max = -1, newMax = max(oldMax, arr[i])
+// O(n), O(1)
+func replaceElements(arr []int) []int {
+	rightMax := -1
+	for i := len(arr) - 1; i >= 0; i-- {
+		newMax := max(rightMax, arr[i])
+		arr[i] = rightMax
+		rightMax = newMax
+	}
+	return arr
+}
