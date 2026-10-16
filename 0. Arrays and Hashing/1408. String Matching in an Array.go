@@ -32,3 +32,22 @@
 // All the strings of words are unique.
 
 package main
+
+import "strings"
+
+// O(n^2 * m^2), Space: O(n*m) for output, n - number of words, m - length of longest word
+func stringMatching(words []string) []string {
+	res := []string{}
+	for i := range words {
+		for j := range words {
+			if i == j {
+				continue
+			}
+			if strings.Contains(words[j], words[i]) {
+				res = append(res, words[i])
+				break
+			}
+		}
+	}
+	return res
+}
