@@ -30,3 +30,19 @@
 // s consists of only English letters and spaces ' '.
 // There will be at least one word in s.
 package main
+
+// Iterate backwards, skip spaces, count chars.
+// O(n), O(1)
+func lengthOfLastWord(s string) int {
+	var count int
+	var i int = len(s) - 1
+	for i >= 0 && string(s[i]) == " " {
+		i--
+	}
+
+	for i >= 0 && string(s[i]) != " " {
+		count++
+		i--
+	}
+	return count
+}
