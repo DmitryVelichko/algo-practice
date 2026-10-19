@@ -23,3 +23,19 @@
 // nums[i] is either 0 or 1.
 
 package main
+
+// O(n), O(1)
+func findMaxConsecutiveOnes(nums []int) int {
+	res := 0
+	cand := 0
+
+	for _, num := range nums {
+		if num == 1 {
+			cand++
+		} else {
+			cand = 0
+		}
+		res = max(res, cand)
+	}
+	return res
+}
