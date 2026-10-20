@@ -33,3 +33,17 @@
 // The phone numbers and seat numbers of the passengers are distinct.
 
 package main
+
+import "strconv"
+
+// O(n), O(1)
+func countSeniors(details []string) int {
+	res := 0
+	for _, str := range details {
+		age, err := strconv.Atoi(str[11:13])
+		if err == nil && age > 60 {
+			res++
+		}
+	}
+	return res
+}
