@@ -28,3 +28,21 @@ package main
 
 // 2 pointers (l,r) + index pointer(r), compare left and right squares and add the largest value to the right (index pointer)
 // O(n), O(n)
+func sortedSquares(nums []int) []int {
+	l, r := 0, len(nums)-1
+	ptr := len(nums) - 1
+	res := make([]int, len(nums))
+	for l <= r {
+		leftSqr := nums[l] * nums[l]
+		rightSqr := nums[r] * nums[r]
+		if leftSqr > rightSqr {
+			res[ptr] = leftSqr
+			l++
+		} else {
+			res[ptr] = rightSqr
+			r--
+		}
+		ptr--
+	}
+	return res
+}
