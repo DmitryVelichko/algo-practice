@@ -29,3 +29,13 @@ package main
 
 // Two pointers one pass: when we find non-zero value with right pointer,
 // swap it with value at left pointer
+// O(n), O(1)
+func moveZeroes(nums []int) {
+	l := 0
+	for r, num := range nums {
+		if num != 0 {
+			nums[l], nums[r] = nums[r], nums[l]
+			l++
+		}
+	}
+}
