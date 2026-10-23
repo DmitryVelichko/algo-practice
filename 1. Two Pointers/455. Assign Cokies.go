@@ -33,6 +33,11 @@
 
 // Iterate through cookies one by one. For each cookie, if it can satisfy the current child, we move to the next child. Either way, we move to the next cookie.
 // T: O(n log n + m log m), S: O(1)/O(n+m) depending on sorting algo
+
+package main
+
+import "slices"
+
 func findContentChildren(g []int, s []int) int {
 	slices.Sort(g)
 	slices.Sort(s)
