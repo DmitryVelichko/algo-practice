@@ -30,3 +30,17 @@
 // 1 <= g[i], s[j] <= 231 - 1
 
 // Note: This question is the same as 2410: Maximum Matching of Players With Trainers.
+
+// Iterate through cookies one by one. For each cookie, if it can satisfy the current child, we move to the next child. Either way, we move to the next cookie.
+// T: O(n log n + m log m), S: O(1)/O(n+m) depending on sorting algo
+func findContentChildren(g []int, s []int) int {
+	slices.Sort(g)
+	slices.Sort(s)
+	childPtr := 0
+	for cookiePtr := 0; cookiePtr < len(s) && childPtr < len(g); cookiePtr++ {
+		if g[childPtr] <= s[cookiePtr] {
+			childPtr++
+		}
+	}
+	return childPtr
+}
