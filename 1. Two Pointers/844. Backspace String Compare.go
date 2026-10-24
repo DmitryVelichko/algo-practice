@@ -31,3 +31,25 @@
 
 // Follow up: Can you solve it in O(n) time and O(1) space?
 
+package main
+
+// Stack
+// O(n+m), O(n+m)
+func parse(str string) string {
+	stack := []rune{}
+	for _, char := range str {
+		if char == '#' {
+			if len(stack) > 0 {
+				stack = stack[:len(stack)-1]
+			}
+		} else {
+			stack = append(stack, char)
+		}
+	}
+	return string(stack)
+}
+func backspaceCompare(s string, t string) bool {
+	s = parse(s)
+	t = parse(t)
+	return s == t
+}
