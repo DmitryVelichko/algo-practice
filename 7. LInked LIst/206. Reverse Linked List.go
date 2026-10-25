@@ -26,3 +26,23 @@
 
 // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 package main
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+// Iterative: prev->None, curr->head, next->curr.next, break link, move prev & curr forward
+// O(n), O(1)
+func reverseList(head *ListNode) *ListNode {
+	var prev *ListNode
+	curr := head
+
+	for curr != nil {
+		next := curr.Next
+		curr.Next = prev
+		prev = curr
+		curr = next
+	}
+	return prev
+}
