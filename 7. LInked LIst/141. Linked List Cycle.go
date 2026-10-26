@@ -33,3 +33,27 @@
 // pos is -1 or a valid index in the linked-list.
 
 // Follow up: Can you solve it using O(1) (i.e. constant) memory?
+
+package main
+
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+// Fast, slow pointers = head, while fast and fast.next, move slow.next and fast.next.next
+// O(n), O(1)
+func hasCycle(head *ListNode) bool {
+	slow := head
+	fast := head
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+		if slow == fast {
+			return true
+		}
+	}
+	return false
+}
