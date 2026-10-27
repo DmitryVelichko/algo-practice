@@ -39,6 +39,8 @@
 // 1 <= code[i] <= 100
 // -(n - 1) <= k <= n - 1
 
+package main
+
 func decrypt(code []int, k int) []int {
 	n := len(code)
 	answer := make([]int, n)
