@@ -33,3 +33,20 @@
  * }
  */
 
+package main
+
+// Dummy node, move forward, if next node == val, skip it.
+// O(n), O(1)
+func removeElements(head *ListNode, val int) *ListNode {
+	dummy := &ListNode{Val: -1, Next: head}
+	curr := dummy
+
+	for curr.Next != nil {
+		if curr.Next.Val == val {
+			curr.Next = curr.Next.Next
+		} else {
+			curr = curr.Next
+		}
+	}
+	return dummy.Next
+}
