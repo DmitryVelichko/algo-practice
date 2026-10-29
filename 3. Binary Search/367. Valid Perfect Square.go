@@ -26,3 +26,23 @@
 // 1 <= num <= 231 - 1
 
 package main
+
+// Binary search
+// O(log n), O(1)
+func isPerfectSquare(num int) bool {
+	l, r := 1, num
+
+	for l <= r {
+		m := l + (r-l)/2
+		sq := m * m
+		if sq > num {
+			r = m - 1
+		} else if sq < num {
+			l = m + 1
+		} else {
+			return true
+		}
+	}
+
+	return false
+}
