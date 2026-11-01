@@ -22,3 +22,30 @@
 // Follow up: Could you do it in O(n) time and O(1) space?
 
 package main
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+// Fast and slow pointers, reverse second half of linked list, check palindrome
+// O(n), O(1)
+func isPalindrome(head *ListNode) bool {
+    fast, slow := head, head
+
+    // find middle (slow)
+    for fast != nil && fast.Next != nil {
+        fast = fast.Next.Next
+        slow = slow.Next
+    }
+
+    // reverse second half
+    var prev *ListNode
+    for slow != nil {
+        tmp := slow.Next
+        slow.Next = prev
+        prev = slow
+        slow = tmp
+    }
+
