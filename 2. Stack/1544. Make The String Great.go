@@ -42,6 +42,32 @@
 package main
 
 import (
-	"strings"
 	"unicode"
 )
+
+func makeGood(s string) string {
+	// We use a slice of runes as our stack
+	var stack []rune
+
+	for _, char := range s {
+		// Check if the stack is not empty
+		if len(stack) > 0 {
+			top := stack[len(stack)-1]
+			// Condition 1: They are the same letter (case-insensitive)
+			sameLetter := unicode.ToLower(top) == unicode.ToLower(char)
+			// Condition 2: One is upper case and the other is lower case
+			differentCase := (unicode.IsUpper(top) && unicode.IsLower(char)) ||
+				(unicode.IsLower(top) && unicode.IsUpper(char))
+			if sameLetter && differentCase {
+				// Twin found! Pop from the stack
+				stack = stack[:len(stack)-1]
+				continue
+			}
+		}
+		// No twin, push the current character onto the stack
+		stack = append(stack, char)
+	}
+
+	// Convert the slice of runes back into a clean string
+	return string(stack)
+}
