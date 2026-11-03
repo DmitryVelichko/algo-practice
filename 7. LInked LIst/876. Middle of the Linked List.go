@@ -23,3 +23,24 @@
 
 // The number of nodes in the list is in the range [1, 100].
 // 1 <= Node.val <= 100
+
+package main
+
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+// Slow and fast pointers
+// O(n), O(1)
+func middleNode(head *ListNode) *ListNode {
+	slow := head
+	fast := head
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+	return slow
+}
