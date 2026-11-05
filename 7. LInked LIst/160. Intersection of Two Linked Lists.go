@@ -57,3 +57,29 @@
 // // Follow up: Could you write a solution that runs in O(m + n) time and use only O(1) memory?
 
 package main
+
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+// 2 pointers
+// O(m+n), O(1)
+func getIntersectionNode(headA, headB *ListNode) *ListNode {
+	l1, l2 := headA, headB
+	for l1 != l2 {
+		if l1 != nil {
+			l1 = l1.Next
+		} else {
+			l1 = headB
+		}
+		if l2 != nil {
+			l2 = l2.Next
+		} else {
+			l2 = headA
+		}
+	}
+	return l1
+}
