@@ -32,3 +32,25 @@
 // 1 <= words[i].length <= 100
 // words[i] consists only of lowercase English letters.
 
+package main
+
+// 2 pointers
+// O(n*m), O(1)
+func firstPalindrome(words []string) string {
+	for _, str := range words {
+		l, r := 0, len(str)-1
+		isPal := true
+		for l < r {
+			if rune(str[l]) != rune(str[r]) {
+				isPal = false
+				break
+			}
+			l++
+			r--
+		}
+		if isPal {
+			return str
+		}
+	}
+	return ""
+}
