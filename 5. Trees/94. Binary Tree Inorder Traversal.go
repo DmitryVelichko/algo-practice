@@ -43,13 +43,15 @@
 
 package main
 
-// Definition for a binary tree node.
-// type TreeNode struct {
-// 	Val   int
-// 	Left  *TreeNode
-// 	Right *TreeNode
-// }
-
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+// DFS inorder recursive O(n), O(n)
 func inorderTraversal(root *TreeNode) []int {
 	res := []int{}
 	var traverse func(node *TreeNode)
@@ -62,5 +64,24 @@ func inorderTraversal(root *TreeNode) []int {
 		traverse(node.Right)
 	}
 	traverse(root)
+	return res
+}
+
+// DFS iterative O(n), O(n)
+func inorderTraversalIterative(root *TreeNode) []int {
+	res := []int{}
+	stack := []*TreeNode{}
+	cur := root
+
+	for cur != nil || len(stack) > 0 {
+		for cur != nil {
+			stack = append(stack, cur)
+			cur = cur.Left
+		}
+		cur = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		res = append(res, cur.Val)
+		cur = cur.Right
+	}
 	return res
 }
