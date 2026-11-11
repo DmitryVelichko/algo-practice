@@ -40,3 +40,30 @@
 // -100 <= Node.val <= 100
 
 // Follow up: Recursive solution is trivial, could you do it iteratively?
+
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+
+package main
+
+func preorderTraversal(root *TreeNode) []int {
+	res := []int{}
+	var traverse func(node *TreeNode)
+	traverse = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		res = append(res, node.Val)
+		traverse(node.Left)
+		traverse(node.Right)
+
+	}
+	traverse(root)
+	return res
+}
