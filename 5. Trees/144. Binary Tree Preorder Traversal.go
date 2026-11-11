@@ -52,6 +52,15 @@
 
 package main
 
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+// DFS inorder recursive O(n), O(n)
 func preorderTraversal(root *TreeNode) []int {
 	res := []int{}
 	var traverse func(node *TreeNode)
@@ -65,5 +74,25 @@ func preorderTraversal(root *TreeNode) []int {
 
 	}
 	traverse(root)
+	return res
+}
+
+// DFS iterative O(n), O(n)
+func preorderTraversalIterative(root *TreeNode) []int {
+	res := []int{}
+	stack := []*TreeNode{}
+	cur := root
+
+	for cur != nil || len(stack) > 0 {
+		if cur != nil {
+			res = append(res, cur.Val)
+			stack = append(stack, cur.Right)
+			cur = cur.Left
+		} else {
+			cur = stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+		}
+	}
+
 	return res
 }
