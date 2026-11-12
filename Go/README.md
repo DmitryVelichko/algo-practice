@@ -1,0 +1,59 @@
+# Arrays and Hashing
+![alt text](<1. Two Sum.png>)
+![alt text](<217. Contains Duplicate.png>)
+![alt text](<242. Valid Anagram.png>)
+![alt text](<49. Group Anagrams-1.png>)
+![alt text](<169. Majority Element.png>)
+![alt text](<238. Product of Array Except Self.png>)
+![alt text](<347. Top K Frequent Elements.png>)
+![alt text](<128. Longest Consecutive Sequence.png>)
+![alt text](<27. remove element.png>)
+![alt text](<706. Design HashMap.png>)
+
+# Two Pointers
+![alt text](<344. Reverse String.png>)
+![alt text](<125. Valid Palindrome-1.png>)
+![alt text](<680. Valid Palindrome II.png>)
+![alt text](<1768. Merge Strings Alternately.png>)
+![alt text](<88. Merge Sorted Array.png>)
+![alt text](<26. Remove Duplicates from Sorted Array.png>)
+![alt text](<167. Two Sum II - Input Array Is Sorted.png>)
+![alt text](<15. 3Sum.png>)
+![alt text](<189. Rotate Array.png>)
+![alt text](<18. 4Sum-1.png>)
+
+# Stack
+![alt text](<20. Valid Parentheses.png>)
+![alt text](<739. Daily Temperatures.png>)
+
+# Binary Search
+![alt text](<704. Binary Search.png>)
+![alt text](<35. Search Insert Position.png>)
+![alt text](<69. Sqrt(x).png>)
+
+
+# Sliding Window
+![alt text](<219. Contains Duplicate II.png>)
+![alt text](<121. Best Time to Buy and Sell Stock.png>)
+
+# Linked List
+
+
+# Trees
+
+# Trie
+
+# Heap
+
+# Backtracking
+
+# Graph
+
+# 1D Dynamic Programming
+
+# Greedy
+
+# Intervals
+
+
+# Math and Geometry

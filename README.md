@@ -1,59 +1,92 @@
 # Arrays and Hashing
-![alt text](<1. Two Sum.png>)
-![alt text](<217. Contains Duplicate.png>)
-![alt text](<242. Valid Anagram.png>)
-![alt text](<49. Group Anagrams-1.png>)
-![alt text](<169. Majority Element.png>)
-![alt text](<238. Product of Array Except Self.png>)
-![alt text](<347. Top K Frequent Elements.png>)
-![alt text](<128. Longest Consecutive Sequence.png>)
-![alt text](<27. remove element.png>)
-![alt text](<706. Design HashMap.png>)
+![alt text](<1. 2 sum.png>)
+![alt text](<217 contains duplicate.png>)
+![alt text](<36 valid sudoku.png>)
+![alt text](<49 group anagrams.png>)
+![alt text](<128 longest conseq seq.png>)
+![alt text](<242 valid anagram.png>)
+![alt text](<248 product of array except self.png>)
+![alt text](<347 top k freq elements.png>)
+![alt text](<encode decode strings.png>)
 
 # Two Pointers
-![alt text](<344. Reverse String.png>)
-![alt text](<125. Valid Palindrome-1.png>)
-![alt text](<680. Valid Palindrome II.png>)
-![alt text](<1768. Merge Strings Alternately.png>)
-![alt text](<88. Merge Sorted Array.png>)
-![alt text](<26. Remove Duplicates from Sorted Array.png>)
-![alt text](<167. Two Sum II - Input Array Is Sorted.png>)
-![alt text](<15. 3Sum.png>)
-![alt text](<189. Rotate Array.png>)
-![alt text](<18. 4Sum-1.png>)
+
+![alt text](<15 3Sum.png>)
+![alt text](<167 two sum 2.png>)
+![alt text](<125 Valid Palindrome.png>)
+![alt text](<11 container with most water.png>)
+![alt text](<42 Trapping Rain Water.png>)
 
 # Stack
-![alt text](<20. Valid Parentheses.png>)
-![alt text](<739. Daily Temperatures.png>)
+
+![alt text](<20 Valid Parentheses.png>)
+![alt text](<739 Daily Temperatures.png>)
+![alt text](<155 Min stack.png>)
+![alt text](<150. Evaluate Reverse Polish Notation.png>)
 
 # Binary Search
 ![alt text](<704. Binary Search.png>)
-![alt text](<35. Search Insert Position.png>)
-![alt text](<69. Sqrt(x).png>)
-
+![alt text](<74. Search a 2D Matrix.png>)
+![alt text](<153. Find Minimum in Rotated Sorted Array.png>)
+![alt text](<33. Search in Rotated Sorted Array.png>)
 
 # Sliding Window
-![alt text](<219. Contains Duplicate II.png>)
 ![alt text](<121. Best Time to Buy and Sell Stock.png>)
+![alt text](<3. Longest Substring Without Repeating Characters.png>)
+![alt text](<567. Permutation in String.png>)
 
 # Linked List
+![alt text](<206. Reverse Linked List.png>)
+![alt text](<21. Merge Two Sorted Lists.png>)
+![alt text](<143. Reorder List.png>)
+![alt text](<141. Linked List Cycle.png>)
+![alt text](<287. Find the Duplicate Number.png>)
+![alt text](<19. Remove Nth Node From End of List.png>)
+![alt text](<138. Copy List with Random Pointer.png>)
 
 
 # Trees
+![alt text](<226. Invert Binary Tree.png>)
+![alt text](<100. Same Tree.png>)
+![alt text](<104. Maximum Depth of Binary Tree.png>)
+![alt text](<543. Diameter of Binary Tree.png>)
+![alt text](<110. Balanced Binary Tree.png>)
+![alt text](<572. Subtree of Another Tree.png>)
+![alt text](<98. Validate Binary Search Tree.png>)
+![alt text](<1448. Count Good Nodes in Binary Tree.png>)
+![alt text](<102. Binary Tree Level Order Traversal.png>)
+![alt text](<230. Kth Smallest Element in a BST.png>)
 
 # Trie
+![alt text](<208. Implement Trie (Prefix Tree).png>)
+![alt text](<211. Design Add and Search Words Data Structure.png>)
 
 # Heap
+![alt text](<1046. Last Stone Weight.png>)
+![alt text](<703. Kth Largest Element in a Stream.png>)
+![alt text](<215. Kth Largest Element in an Array.png>)
 
 # Backtracking
+![alt text](<78. Subsets.png>)
+![alt text](<22. Generate Parentheses.png>)
 
 # Graph
+![alt text](<133. Clone Graph.png>)
+![alt text](<200. Number of Islands.png>)
+![alt text](<695. Max Area of Island.png>)
 
 # 1D Dynamic Programming
+![alt text](<70. Climbing Stairs.png>)
 
 # Greedy
+![alt text](<53. Maximum Subarray.png>)
 
 # Intervals
-
+![alt text](<Meeting Rooms.png>)
+![alt text](<56. Merge Intervals.png>)
+![alt text](<435. Non-overlapping Intervals.png>)
 
 # Math and Geometry
+![alt text](<202. Happy Number.png>)
+![alt text](<66 Plus one.png>)
+![alt text](<50. Pow(x, n).png>)
