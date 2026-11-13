@@ -32,3 +32,16 @@
 # 1 <= s.length <= 104
 # s consists of only English letters and spaces ' '.
 # There will be at least one word in s.
+
+# Iterate backwards, skip spaces, count chars.
+# O(n), O(1)
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        res = 0
+        l = len(s)-1
+        while l>=0 and s[l] == " ":
+            l-=1
+        while l>=0 and s[l] != " ":
+            res+=1
+            l-=1
+        return res
