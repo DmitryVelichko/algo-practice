@@ -24,3 +24,16 @@
 
 # 1 <= nums.length <= 105
 # nums[i] is either 0 or 1.
+
+# O(n), O(1)
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: list[int]) -> int:
+        res = 0
+        currMax = 0
+        for num in nums:
+            if num == 1:
+                currMax +=1
+            elif num == 0:
+                currMax = 0
+            res = max(currMax, res)
+        return res
