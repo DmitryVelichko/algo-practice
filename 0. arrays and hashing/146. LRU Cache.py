@@ -42,3 +42,19 @@
 # 0 <= key <= 104
 # 0 <= value <= 105
 # At most 2 * 105 calls will be made to get and put.
+
+# initialize Doulbe Linked List class: key, val, prev, next
+# initialize LRUCache class: capacity, hashmap, dummy left (LRU) <=> dummy right (Most Recent)
+# helper functions: remove() - remove node from list, insert() - insert node at right
+# get() key in hash ? remove(node), insert(node), => node.val; : => -1
+# put() key in hash ? remove(node); put a new node in hashmap, insert(node);
+# cache.size > cap ? remove(lru), cache.delete(lru.ley)
+
+
+# Time: get(), put(): O(1), Space: O(n)
+class Node:
+    def __init__(self, key, val):
+        self.key, self.val = key, val
+        self.prev = self.next = None
+
+
