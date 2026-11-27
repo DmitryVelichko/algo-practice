@@ -48,3 +48,21 @@
 // 0 <= nums.length <= 100
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
+
+// Input: nums = [3,2,2,3], val = 3
+// Output: 2, nums = [2,2,_,_]
+// Shift all normal nums to the left using pointer k
+// O(n), O(1)
+
+package main
+
+func removeElement(nums []int, val int) int {
+	k := 0
+	for _, num := range nums {
+		if num != val {
+			nums[k] = num
+			k++
+		}
+	}
+	return k
+}
