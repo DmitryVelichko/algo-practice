@@ -54,3 +54,15 @@
 # // Shift all normal nums to the left using pointer k
 # // O(n), O(1)
 
+# Input: nums = [3,2,2,3], val = 3
+# Output: 2, nums = [2,2,_,_]
+# Shift all normal nums to the left using pointer k
+# O(n), O(1)
+class Solution:
+    def removeElement(self, nums: list[int], val: int) -> int:
+        l = 0
+        for num in nums:
+            if num != val:
+                nums[l] = num
+                l += 1
+        return l
