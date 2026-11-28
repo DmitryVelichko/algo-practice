@@ -28,3 +28,21 @@
 // -104 <= nums[i] <= 104
 
 // Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+
+package main
+
+// Greedy Algo. We want the maximum sum of a contiguous subarray.
+// If curSum becomes negative, reset it to 0 (start a new subarray).
+// O(n), O(1)
+func maxSubArray(nums []int) int {
+	curSum := 0
+	maxSum := nums[0]
+	for _, num := range nums {
+		if curSum < 0 {
+			curSum = 0
+		}
+		curSum += num
+		maxSum = max(maxSum, curSum)
+	}
+	return maxSum
+}
